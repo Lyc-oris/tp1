@@ -79,12 +79,15 @@ echo ("<br>");
 if (substr($code , -14 , 5) === "ARCHI") {
     echo("Project d architecture");
 }
+echo("<br>");
 
 const APP_NAME = "MonSite";
 const APP_VERSION = "1.0";
 
-constant(APP_NAME);
+echo(APP_NAME);
+echo("<br>");
+echo(APP_VERSION);
 
-constant(APP_VERSION)
+
 
 ?>

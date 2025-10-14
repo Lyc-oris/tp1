@@ -63,31 +63,232 @@ echo ("<br>");
 echo ("<br>");
 
 if ($dateLivrasion === NULL) {
-    echo("date non definie");
-}
-else
-    echo("Livration");
+    echo ("date non definie");
+} else
+    echo ("Livration");
 
 echo ("<br>");
 echo ("<br>");
 $code = "ARCHI-2025-007";
 
-echo(substr($code , -14 , 5));
+echo (substr($code, -14, 5));
 echo ("<br>");
 echo ("<br>");
 
-if (substr($code , -14 , 5) === "ARCHI") {
-    echo("Project d architecture");
+if (substr($code, -14, 5) === "ARCHI") {
+    echo ("Project d architecture");
 }
-echo("<br>");
+echo ("<br>");
 
 const APP_NAME = "MonSite";
 const APP_VERSION = "1.0";
 
-echo(APP_NAME);
+echo (APP_NAME);
+echo ("<br>");
+echo (APP_VERSION);
+echo ("<br>");
+echo ("<br>");
+
+$i = 5;
+
+echo ($i++);
+
+echo ("<br>");
+
+echo (++$i);
+
+echo ("<br>");
+
+echo ("the different between i++ and ++i is that the i++ changes the value after the secnond usage but ++i change the value in the exact same place");
+
+
+echo ("<br>");
+
+
+$compteur = 0;
+
+for ($i = 1; $i <= 5; $i++) {
+    echo ($i . "<br>");
+}
+
+echo ("<br>");
+
+
+$val = 10;
+
+while ($val >= 5) {
+    echo ($val . "<br>");
+    $val--;
+}
+
+echo ("<br>");
+
+
+$age = rand(1, 20);
+
+if ($age < 18) {
+    echo ("mineur");
+} else {
+    echo ("majeur");
+}
+
+echo ("<br>");
+
+$note = rand(0, 20);
+
+if ($note < 10) {
+    echo ("echec");
+} elseif ($note >= 10 and $note <= 12) {
+    echo ("Passable");
+} elseif ($note >= 13 and $note <= 15) {
+    echo ("Bien");
+} elseif ($note > 15) {
+    echo ("Tres bien");
+}
+
 echo("<br>");
-echo(APP_VERSION);
+
+$jour = rand(1, 8);
+
+switch ($jour) {
+    case $jour == 1:
+        echo ($jour. "  =>  " ."lundi");
+        break;
+
+    case $jour == 2:
+        echo ($jour. "  =>  " ."mardi");
+        break;
+
+    case $jour == 3:
+        echo ($jour. "  =>  " ."merrcredi");
+        break;
+
+    case $jour == 4:
+        echo ($jour. "  =>  " ."jeudi");
+        break;
+
+    case $jour == 5:
+        echo ($jour. "  =>  " ."vendredi");
+        break;
+
+    case $jour == 6:
+        echo ($jour. "  =>  " ."samedi");
+        break;
+
+    case $jour == 7:
+        echo ($jour. "  =>  " ."dimanche");
+        break;
+
+    case $jour == 8:
+        echo ($jour. "  =>  " ."jour inconnu");
+        break;
+}
+
+echo("<br>");
+
+$a = rand(-10 , 10);
+$b = rand(-10 , 10);
+
+if ($a > 0 & $b > 0) {
+    echo("Positive");
+}
+elseif($a > 0 & $b < 0){
+    echo("Nombres mixet");
+}
+elseif ($a < 0 & $b > 0) {
+    echo("Nombres mixet");
+}
+elseif($a < 0 & $b < 0){
+    echo("Negative");
+}
+else
+    echo(0);
+
+echo("<br>");
 
 
+$i = 1;
+while ($i <= 10) {
+    echo($i++ . "  ");
+}
+echo("<br>");
+
+$motDePasse = "php2025";
+$tentatives = 0 ;
+while ($motDePasse == !"php2025") {
+    echo("ressayes <br>");
+    $tentatives++;
+}
+echo("mot de passe correct apres". "  " . $tentatives ."  " . "tentatives");
+
+echo("<br>");
+
+for ($i=1; $i <= 20 ; $i++) { 
+    $i++ ;
+    echo("$i" . "  ");
+}
+
+echo("<br>");
+$somme = 0;
+for ($i=1; $i <= 100 ; $i++) { 
+    $somme += $i ;
+}
+echo("La somme des nombres de 1 a 100 est :  ".$somme);
+
+echo("<br>");
+
+$n = 5;
+
+for ($i=0; $i < 10 ; $i++) { 
+    echo( $n. "  x  " . ($i+1). " = " .$n * ($i+1) . "<br>");
+}
+
+echo("<br>");
+
+$nombreMystere = 7;
+
+$essai = 1 ;
+
+$nombre = 0;
+
+while ($nombreMystere != $nombre) {
+    $nombre = rand(1 , 10);
+    echo("ressaye <br>");
+    $essai ++;
+}
+echo("Trouve en " . $essai . "  essais ");
+
+echo("<br>");
+
+
+for ($i=10; $i >= 0 ; $i--) { 
+    echo($i . "  ");
+}
+echo("<br> Decollage");
+
+echo("<br>");
+
+for ($i=1; $i <= 10 ; $i++) { 
+    echo("<span>". $i ."</span> <sup>". 2 ."</sup> =  " . pow($i, 2) . "<br>");
+}
+
+for ($i=1; $i <= 10 ; $i++) { 
+    if ($i % 2 == 0) {
+        echo($i . " est pair <br>");
+    }
+    else{
+        echo($i . " est impair <br>");
+    }
+}
+echo("<br>");
+
+for ($i=1; $i <= 20 ; $i++) { 
+    if ($i % 5 == 0) {
+        echo($i . " multiple de 5 ! <br>");
+    }
+    else{
+        echo($i . "<br>");
+    }
+}
 
 ?>

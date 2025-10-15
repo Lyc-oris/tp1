@@ -291,4 +291,79 @@ for ($i=1; $i <= 20 ; $i++) {
     }
 }
 
+$note = [];
+for ($i=0; $i < 20; $i++) { 
+    $note[$i] = rand(0,20);
+}
+
+print_r($note);
+
+echo("<br>");
+
+$succed = [];
+
+$noteMax = 0;
+$noteMin = 20 ;
+for ($i=0; $i < 20 ; $i++) { 
+    if ($note[$i]>=10) {
+    $succed[$i] = $note[$i];
+    }
+}
+$fail = [];
+for ($i=0; $i < 20 ; $i++) { 
+    if ($note[$i]<10) {
+    $fail[$i] = $note[$i];
+    }
+}
+for ($i=0; $i < 20 ; $i++) { 
+    if ($note[$i] >= $noteMax) {
+        $noteMax = $note[$i];
+    }
+}
+for ($i=0; $i < 20 ; $i++) { 
+    if ($note[$i] <= $noteMin) {
+        $noteMin= $note[$i];
+    }
+}
+$somme = 0;
+$moyeen = 0;
+for ($i=0; $i <20 ; $i++) { 
+    $somme += $note[$i];
+}
+$moyeen = $somme/20;
+
+$moremoyeen = [];
+$lessmoyeen = [];
+for ($i=0; $i < 20 ; $i++) { 
+    if ($note[$i] >= $moyeen) {
+        $moremoyeen[$i] = $note[$i];
+    }
+}
+for ($i=0; $i < 20 ; $i++) { 
+    if ($note[$i] < $moyeen) {
+        $lessmoyeen[$i] = $note[$i];
+    }
+}
+
+
+echo("les stg ressuie : ". count($succed) . "<br>");
+echo("les stg ne pas ressuie : " .count($fail). "<br>");
+echo("la premier note est : ".$noteMax . "<br>");
+echo("la dernier note est :  ".$noteMin . "<br>");
+echo("la moyeen do classe est : " . $moyeen . "<br>");
+echo("les stg qui a obetenu un note superieur a la moyenne est  : " . "<br>");
+for ($i=0; $i < 20 ; $i++) { 
+    if ($note[$i] >= $moyeen) {
+        $moremoyeen[$i] = $note[$i];
+        echo($moremoyeen[$i] . "<br>");
+    }
+}
+echo("les stg qui a obetenu un note inferieur a la moyenne est  : " . "<br>");
+for ($i=0; $i < 20 ; $i++) { 
+    if ($note[$i] < $moyeen) {
+        $lessmoyeen[$i] = $note[$i];
+        echo($lessmoyeen[$i] . "<br>");
+    }
+}
+
 ?>

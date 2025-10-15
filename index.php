@@ -302,8 +302,8 @@ echo("<br>");
 
 $succed = [];
 
-$noteMax = 0;
-$noteMin = 20 ;
+$noteMax = $note[0];
+$noteMin = $note[0] ;
 for ($i=0; $i < 20 ; $i++) { 
     if ($note[$i]>=10) {
     $succed[$i] = $note[$i];

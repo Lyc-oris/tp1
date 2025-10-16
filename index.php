@@ -366,4 +366,44 @@ for ($i=0; $i < 20 ; $i++) {
     }
 }
 
+
+
+
+$nombrestg = rand(10,30);
+$stg = [];
+$notes =[];
+
+for ($i=0; $i < $nombrestg; $i++) { 
+    $stg[$i] = " stg  ". $i+1;
+    $notes[$i] = rand(0,20);
+}
+$i = 0;
+while ($i < $nombrestg) {
+    echo($i+1 . " - ". $stg[$i]. " : ". $notes[$i] . "<br>");
+    $i++ ;
+}
+echo("<br>");
+$table=[];
+for ($i=0; $i <$nombrestg ; $i++) { 
+    $table[$stg[$i]]= $notes[$i];
+}
+$i = 1;
+foreach ($table as $stg => $notes) {
+    echo($i . " - ". $stg . " : ". $notes . "<br>");
+    $i++ ;
+}
+
+echo("<br>");
+
+$PIB = ["Afrique_sud" => "420 M$", 
+        "Egypt" => "380 M$",
+        "Algeria" => "280 M$",
+        "Nigeria" => "220 M$",
+        "Maroc" => "168 M$",];
+
+$i = 1;
+foreach ($PIB as $key => $value) {
+    echo($i . " - " . $key ." : " .$value . "<br>");
+    $i++;
+}
 ?>

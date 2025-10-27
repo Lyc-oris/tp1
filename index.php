@@ -406,4 +406,14 @@ foreach ($PIB as $key => $value) {
     echo($i . " - " . $key ." : " .$value . "<br>");
     $i++;
 }
+
+
+
+echo("<br>");
+echo("<br>");
+echo("<br>");
+
+
+
+
 ?>

@@ -71,29 +71,32 @@ elseif($a < $b){
 else
     echo "les deux sont egaux";
 
+
+echo "<br>";
+
 $day = "Monday" ;
 
-switch ($variable) {
+switch ($day) {
     case 'Monday':
         echo "today is Monday <br>";
         break;
     case 'Tuesday':
-        # code...
+        echo "today is Tuesday <br>";
         break;
     case 'Wednesday':
-        # code...
+        echo "today is Wednesday <br>";
         break;
     case 'Thursday':
-        # code...
+        echo "today is Thursday <br>";
         break;
     case 'Friday':
-        # code...
+        echo "today is Friday <br>";
         break;
     case 'Saturday':
-        # code...
+        echo "today is Saturday <br>";
         break;
     case 'Sunday':
-        # code...
+        echo "today is Sunday <br>";
         break;
     
     default:
@@ -101,5 +104,131 @@ switch ($variable) {
         break;
 }
 
-monday, , , , , , and 
+echo "<br>";
+
+for ($i=0; $i < 10 ; $i++) { 
+    echo $i+1 . " <br> ";
+}
+echo "<br>";
+for ($i=0; $i < 10 ; $i++) { 
+    echo $i . " <br> " ;
+    $i++;
+}
+echo "<br>";
+for ($i=0; $i < 10 ; $i++){
+    echo $i . "<br>";
+    $i++;
+    if ($i == 8){
+        break;
+    }
+    
+}
+
+echo "<br>";
+$i=0;
+while ( $i < 10 ) { 
+    echo $i+1 . " <br> ";
+    $i++;
+
+}
+echo "<br>";
+$i=0;
+while ( $i < 10 ) { 
+    echo $i . " <br> ";
+    $i+=2;
+
+}
+echo "<br>";
+$i=0;
+while ( $i < 10 ) { 
+    echo $i . " <br> ";
+    $i+=2;
+    if ($i == 10) {
+        break;
+    }
+
+}
+
+
+echo "<br>";
+$i=0;
+do{ 
+    echo $i+1 . " <br> ";
+    $i++;
+}
+while ( $i < 10 );
+echo "<br>";
+$i=0;
+do{ 
+    echo $i . " <br> ";
+    $i+=2;
+}
+while ( $i < 10 ) ;
+echo "<br>";
+$i=0;
+do { 
+    echo $i . " <br> ";
+    $i+=2;
+    if ($i == 10) {
+        break;
+    }
+
+}
+while ( $i < 10 ) ;
+
+echo "<br>";
+
+function hello($name){
+    echo "hello {$name}";
+}
+
+hello("haytham");
+
+echo "<br>";
+
+function plus($a , $b){
+    return $a + $b;
+}
+
+echo plus(4,5);
+
+echo "<br>";
+
+function pair($number){
+    if (($number % 2) == 0){
+        return "true";
+    }
+    else{
+        return "false";
+    }
+}
+
+echo pair(5);
+
+echo "<br>";
+echo "<br>";
+
+$table = ["moahmed" , "ahmed", "khalid" , "haytham", "rachid"];
+
+for ($i=0; $i <count($table) ; $i++) { 
+    echo $table[$i] . "<br>";
+}
+
+echo "<br>";
+
+array_push($table, "salman");
+
+for ($i=0; $i <count($table) ; $i++) { 
+    echo $table[$i] . "<br>";
+}
+echo "<br>";
+
+array_pop($table);
+
+for ($i=0; $i <count($table) ; $i++) { 
+    echo $table[$i] . "<br>";
+}
+
+$table = ["name" => "mohamed" , "age" => 23 , ]
+
 ?>

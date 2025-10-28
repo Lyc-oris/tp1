@@ -22,24 +22,26 @@ class Stagiaire
     }
     function estReussi($note1){
         if ($note1 >= 10) {
-            echo "true";
+            return "true";
         }
     }
     function afficherInfos(){
             echo $this ->lastName . " " . $this -> firstName . " " ;
-            echo " note :  ".  "<br>";
-            if ($this->calculerMoyenne($this -> note) == "true"){
-                echo "Reussi";
+            echo " moyeen :  ". $this->calculerMoyenne($this -> note).  "<br>";
+            if ($this->estReussi($this->calculerMoyenne($this -> note)) == "true"){
+                echo "<br>Reussi <br>";
             }
             else
-                echo "Echoue";
+                echo "<br>Echoue <br>";
         }
     function __destruct()
     {
-        echo "la fin de est";
+        echo "la fin de test";
     }
 }
 
 
-$clas = new Stagiaire(makhlofi mohamed) ; 
+$clas = new Stagiaire("makhlofi", "mohamed", [1,15,17]) ;
+
+$clas -> afficherInfos();
 ?>

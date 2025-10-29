@@ -39,7 +39,8 @@ class Compte
     }
 
     function retirer($c){
-        if ($this -> sold >= 0){
+        if ($this -> sold >= $c){
+
             $this -> sold -= $c;
         }
         else
@@ -54,14 +55,7 @@ class Compte
             $this -> sold = 0;
         }
     }
-
-    function setValiderMontant(){
-        $this -> sold = $this -> validerMontant();
-    }
-
-    function getValiderMontant(){
-        return $this -> validerMontant() ;
-    }
+    
 
     function __destruct()
     {
@@ -78,10 +72,10 @@ $compte2 = new Compte("Salma", "MA5678" , 0);
 $compte1 -> deposer(250);
 $compte1 -> retirer(900);
 $compte1 -> retirer(300);
-$compte1 -> getValiderMontant();
+
 $compte2 -> deposer(1000);
 $compte2 -> retirer(200);
-$compte2 -> getValiderMontant();
+
 
 $compte1 -> afficherSolde();
 echo "<br>";

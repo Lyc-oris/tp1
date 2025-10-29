@@ -1,6 +1,10 @@
 <?php
 
 //using echo
+
+use Dom\HTMLDocument;
+use Dom\HTMLElement;
+
 echo ("my name is haytham i'am 23 i live in sale ");
 echo "<br>";
 //using print 

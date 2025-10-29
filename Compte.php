@@ -2,13 +2,13 @@
 
 class Compte
 {
-    private $titulaire , $numeroCompte , $sold = 0.00;
+    private $titulaire , $numeroCompte , $sold;
 
     function __construct($a , $b , $c)
     {
         $this -> titulaire = $a;
         $this -> numeroCompte = $b; 
-        $this -> sold = $c;
+        $c > 0 ? $this -> sold = $c : 0.00;
     }
     function setSold($c){
         $this -> sold = $c;
@@ -37,10 +37,8 @@ class Compte
         else
             echo "not valid";
     }
-
     function retirer($c){
         if ($this -> sold >= $c){
-
             $this -> sold -= $c;
         }
         else
@@ -52,7 +50,7 @@ class Compte
 
     private function validerMontant(){
         if ($this -> sold < 0) {
-            $this -> sold = 0;
+            $this -> sold = 0.00;
         }
     }
     

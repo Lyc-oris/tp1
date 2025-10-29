@@ -13,7 +13,7 @@ class Voiture
     }
     public function info()
     {
-        echo ("marque :" . $this->marque . "<br>" . "couleur : " . $this->couleur . "<br>" . "vitesse : " . $this->vitesse . "<br>");
+        echo ("<b>marque : </b>" . $this->marque . "<br>" . "<b>couleur :</b> " . $this->couleur . "<br>" . "<b>vitesse : </b>" . $this->vitesse . "<br>");
     }
     function demarrer()
     {
@@ -22,7 +22,7 @@ class Voiture
     function accelere($plus)
     {
         $this->vitesse = $this->vitesse + $plus;
-        echo ("New vitesse : " . $this->vitesse . "<br>");
+        echo ("<b>New vitesse :</b> " . $this->vitesse . "<br>");
     }
 }
 

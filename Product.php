@@ -59,8 +59,11 @@ class Product
             echo "the stock is already empty <br><br>";
     }
     function getValeurTotale()
-    {
-        echo "<b>the total of the stock in MAD is : </b> " . ($this->quantity * $this->price) . "  MAD <br><br>";
+    {   
+        $tota = $this->quantity * $this->price;
+        echo <<<HTML
+        <b><span >the total of the stock in MAD is :</b>  $tota  MAD </span><br><br>
+        HTML;
     }
     function __destruct()
     {

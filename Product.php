@@ -60,7 +60,7 @@ class Product
     }
     function getValeurTotale()
     {
-        echo "the total of the stock in MAD is :  " . ($this->quantity * $this->price) . "  MAD <br><br>";
+        echo "<b>the total of the stock in MAD is : </b> " . ($this->quantity * $this->price) . "  MAD <br><br>";
     }
     function __destruct()
     {
@@ -74,7 +74,7 @@ $product1 = new Product(5304, "stilo", 32, 6);
 $product1->afficherProduct();
 $product1->ajouterStock(4);
 $product1->afficherProduct();
-$product1->retirerStock(5);
+$product1->retirerStock(4);
 $product1->afficherProduct();
 $product1->getValeurTotale();
 $product1->setPrice(30);
